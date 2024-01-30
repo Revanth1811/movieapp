@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <img class="bgimg" src="moviee.jpg" alt="">
+    <div class="nav">
+        <div class="logo">
+            <img class="logoimg" src="movi.png" alt="">
+            <h1 class="name">MOVIE APP</h1>
+        </div>
+        <div class="search">
+            <input class="in" type="text" id="movieName" onchange="search()" placeholder="search movie">
+            <button class="search-btn" onclick="search()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg></button>
+        </div>
+        <div id="theme" onclick="updateTheme()"></div>
+    </div>
+    <div class="container">
+        <div id="notFound" class="d-none">
+            <div class="emoji">😞🥹😞</div>
+            <h3>Couldn't Found "<span id="notfoundname"></span>"!</h3>
+            <div class="errorMsg">Try seraching for somthing else or try with a different spelling</div>
+        </div>
+        <div id="found" class="d-none">
+            <div>
+                <h3 class="title" id="title">Srimanthudu</h3>
+                <p class="desc" id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id saepe ex nisi delectus officiis, illum reprehenderit!</p>
+                <p>Released on : <span id="date"></span></p>
+                <p>Genre : <span id="genre"></span></p>
+                <p>Actors : <span id="actors"></span></p>
+                <p>Directors : <span id="director"></span></p>
+                <p>Box office collection  : <span id="BoxOffice"></span></p>
+                <p>Awards : <span id="awards"></span></p>
+                <p>Writer : <span id="writers"></span></p>
+                <p>IMDB Rating : <span id="rating"></span></p>
+                <div  id="more" onclick="show()">More info...</div>
+            </div>
+            <img class="poster" id="poster" src="" alt="">
+        </div>
+    </div>
+    <div class="d-none" id="morecontainer">
+        <div class="cancel" onclick="cancel()"><i class="bi bi-x"></i></div>
+        <div class="moreflex">
+            <div>
+                <p>Type : <span id="type"></span></p>
+                <p>Country : <span id="country"></span></p>
+                <p>Run Time : <span id="runtime"></span></p>
+                <p>DVD : <span id="dvd"></span></p>
+            </div>
+            <img class="poster1" id="poster1" src="" alt="">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

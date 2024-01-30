@@ -1,0 +1,14 @@
+.absolute{
+    position: absolute;
+    top: 10px;
+    
+}
+
+
+$modal-sm:400px;
+$modal-content-bg: rgba(36, 35, 35, 0.747);
+$btn-color:white;
+$input-bg:white;
+$input-color:white;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
